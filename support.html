@@ -1,1 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>よくある質問 | VoxNote</title>
+<style>
+  :root {
+    --bg: #faf9fc;
+    --card-bg: #ffffff;
+    --text-primary: #1a1a1a;
+    --text-secondary: #5a5a5a;
+    --accent: #7c5cfc;
+    --border: #e8e5f0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.7;
+  }
+  .header {
+    text-align: center;
+    padding: 48px 20px 32px;
+  }
+  .header h1 {
+    font-size: 1.6rem;
+    margin: 0 0 8px;
+  }
+  .header p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 16px 80px;
+  }
+  .category {
+    margin-bottom: 36px;
+  }
+  .category-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 0 14px;
+    padding-left: 2px;
+  }
+  details {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  summary {
+    padding: 16px 18px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.98rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+";
+    font-size: 1.3rem;
+    color: var(--accent);
+    font-weight: 300;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+  details[open] summary::after {
+    transform: rotate(45deg);
+  }
+  .answer {
+    padding: 0 18px 18px;
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+  }
+  .answer p {
+    margin: 0 0 10px;
+  }
+  .answer p:last-child { margin-bottom: 0; }
+  .answer .note {
+    font-size: 0.85rem;
+    color: #8a8a8a;
+  }
+  .answer .steps {
+    margin: 8px 0;
+    padding-left: 4px;
+  }
+  .answer .steps p {
+    margin: 0 0 6px;
+  }
+  .answer strong {
+    color: var(--text-primary);
+    font-weight: 700;
+  }
+  .footer {
+    text-align: center;
+    color: #aaa;
+    font-size: 0.8rem;
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
 
+<div class="header">
+  <h1>✦ よくある質問</h1>
+  <p>VoxNoteアプリについてのFAQ</p>
+</div>
+
+<div class="container">
+
+  <!-- 🎙️ カテゴリー1: 録音・文字起こし -->
+  <div class="category">
+    <h2 class="category-title">🎙️ 録音・文字起こしについて</h2>
+
+    <details>
+      <summary>録音できる最大時間はどのくらいですか？</summary>
+      <div class="answer">
+        <p>1回の録音は最大30分です。30分に達すると自動的に録音が停止し、そのまま要約の作成に進みます。長い会話や問診の場合は、区切りの良いところで一度保存し、複数回に分けて録音することをおすすめします。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>文字起こしが正しく認識されません。</summary>
+      <div class="answer">
+        <p>以下をご確認ください。</p>
+        <p>1. iPhoneの「設定」アプリ ➔「プライバシーとセキュリティ」➔「音声認識」および「マイク」で、VoxNoteの利用が許可されているか。</p>
+        <p>2. 周囲の雑音が大きい環境では、認識精度が低下することがあります。できるだけ静かな環境でのご利用をおすすめします。</p>
+        <p class="note">文字起こしはお使いの端末内で処理されており、対応言語は日本語のみです。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>録音した音声は後から聞き直せますか？</summary>
+      <div class="answer">
+        <p>はい、ノートの詳細画面にある再生ボタンから、録音した音声をその場で再生できます。ただし音声データは作成から7日間で自動的に削除されるため、それ以降は再生できなくなります。</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- 🤖 カテゴリー2: 要約AI・言語モデル -->
+  <div class="category">
+    <h2 class="category-title">🤖 要約AI・言語モデルについて</h2>
+
+    <details>
+      <summary>要約機能を使う前に何か準備が必要ですか？</summary>
+      <div class="answer">
+        <p>はい。要約機能を使うには、設定画面から要約用のAI（言語モデル）を一度だけ準備（ダウンロード）していただく必要があります。初回のみ数分から10分弱程度かかりますが、これは端末内でAIを高速に動かすための最適化処理（ANEコンパイル）が行われるためです。準備が完了すれば、以降はインターネットに繋がっていなくても要約が使えます。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>要約の作成に時間がかかります。</summary>
+      <div class="answer">
+        <p>要約はすべて端末内のAIで処理されるため、クラウドAPIより時間がかかる場合があります。特に文字起こしが長い場合（数千文字以上）は、内部でテキストを分割して段階的に要約する処理が入るため、通常より時間がかかることがあります。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>要約の内容が事実と違う、不自然な部分があります。</summary>
+      <div class="answer">
+        <p>VoxNoteの要約は、端末内で動作する軽量AIモデルによる自動生成です。長時間の録音や専門用語（医療用語など）を含む内容では、まれに解釈の誤りや情報の抜け漏れが生じることがあります。</p>
+        <p class="note">特に医療関連など重要な用途でご利用の場合は、必ずご自身で内容を確認・修正した上でご利用ください。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>要約用のAIを別のものに変更・再設定できますか？</summary>
+      <div class="answer">
+        <p>設定画面の「モデルを解放して再設定（メモリ解放）」から、読み込んだAIをメモリ上から解放し、再度準備し直すことができます。ダウンロード済みのファイル自体は端末に残るため、再設定時に大きな再ダウンロードが発生することはありません。</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- 📝 カテゴリー3: カスタムプロンプト -->
+  <div class="category">
+    <h2 class="category-title">📝 カスタムプロンプトについて</h2>
+
+    <details>
+      <summary>「SOAP問診」「インフォームドコンセント」とは何ですか？</summary>
+      <div class="answer">
+        <p>初回起動時にあらかじめ登録されている、医療現場向けの要約テンプレートです。「SOAP問診」は診察・問診の内容を医療記録の標準形式（S/O/A/P）でまとめ、「インフォームドコンセント」は説明と同意の内容を記録用フォーマットでまとめます。録音画面のプロンプト選択メニューからいつでも切り替えられます。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>自分専用の要約プロンプトを追加できますか？</summary>
+      <div class="answer">
+        <p>はい。設定画面の「プロンプトを管理する」から、いくつでも自由に追加・編集・削除ができます。用途（会議メモ、通話ログなど）に合わせて自由な指示文を登録し、録音画面のメニューから呼び出してご利用いただけます。</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- 💳 カテゴリー4: 無料枠・サブスクリプション -->
+  <div class="category">
+    <h2 class="category-title">💳 無料枠・サブスクリプションについて</h2>
+
+    <details>
+      <summary>無料で何回まで要約を作成できますか？</summary>
+      <div class="answer">
+        <p>要約の作成は累計30回まで無料でご利用いただけます。これは月ごとにリセットされる回数ではなく、端末での累計回数です。残りの無料回数は設定画面でいつでも確認できます。</p>
+        <p class="note">録音・文字起こし自体は無料枠に関係なく、いつでもご利用いただけます。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>無料回数を使い切った後はどうなりますか？</summary>
+      <div class="answer">
+        <p>累計30回を超えると、以降の要約作成には月額プランへの加入が必要になります。文字起こし・録音・過去のノートの閲覧は、加入の有無にかかわらず引き続きご利用いただけます。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>サブスクリプションを解約したい。</summary>
+      <div class="answer">
+        <p>iPhoneの「設定」アプリ ➔ 一番上のApple ID ➔「サブスクリプション」から、VoxNoteの月額プランを選択して解約できます。契約期間終了の24時間前までに解約すれば、次回の自動更新が行われません。</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- 💻 カテゴリー5: PCブラウザ連携 -->
+  <div class="category">
+    <h2 class="category-title">💻 PCブラウザ連携について</h2>
+
+    <details>
+      <summary>PCから文字起こし・要約を見る方法は？</summary>
+      <div class="answer">
+        <p>設定画面でアクセス用のパスワードを決めた上で「サーバーを起動」してください。表示されたURLを、iPhoneと同じネットワーク（同じWi-Fiルーター）に接続されたPCのブラウザで開き、設定したパスワードを入力すると、文字起こしと要約の閲覧・コピー・録音音声の再生ができます。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>PCのブラウザからアクセスできません。</summary>
+      <div class="answer">
+        <p>以下をご確認ください。</p>
+        <p>1. iPhoneとPCが同じWi-Fiルーター配下に接続されているか（別のネットワークやゲストWi-Fiでは接続できません）。</p>
+        <p>2. iPhone側でVoxNoteの画面を開いたまま、サーバーが「起動中」になっているか。</p>
+        <p>3. ブラウザによっては接続情報が古くキャッシュされ、正しく開けない場合があります。別のブラウザ、またはプライベートブラウジングでの再アクセスをお試しください。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>この機能は安全ですか？</summary>
+      <div class="answer">
+        <p>サーバーは手動で起動しない限り動作せず、アクセス時には設定したパスワードでの認証が必要です。また通信は同一ネットワーク内でのみ行われ、インターネットを経由した外部への送信は一切ありません。公共のWi-Fiなど、第三者が同じネットワークに接続しうる環境でのご利用はお控えください。</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- 🔒 カテゴリー6: セキュリティ・データ管理 -->
+  <div class="category">
+    <h2 class="category-title">🔒 セキュリティ・データ管理について</h2>
+
+    <details>
+      <summary>アプリを開くたびに認証が求められます。</summary>
+      <div class="answer">
+        <p>VoxNoteは録音内容などの機微な情報を扱うため、起動時にお使いの端末のFace ID・Touch ID・パスコードによる認証を要求する仕様になっています。この認証情報自体はiOSが処理しており、VoxNoteや開発者がこれを取得・保存することはありません。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>ノートや録音データはいつまで保存されますか？</summary>
+      <div class="answer">
+        <p>文字起こし・要約テキストは作成日から30日間、録音した音声データは作成日から7日間、端末内に保存された後、自動的に削除されます。期限が切れたノート自体（日時やタイトル）は一覧に残りますが、中身は空になります。長期保存したい内容は、期限内にコピーやPC経由での保存を行ってください。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>利用履歴とは何ですか？</summary>
+      <div class="answer">
+        <p>録音の保存や要約の作成、モデルの準備完了など、ご自身の利用状況を振り返るための記録です。設定画面の「利用履歴を見る」から確認できます。この記録は端末内にのみ保存され、外部に送信されることはありません。</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- 📩 カテゴリー7: お問い合わせ -->
+  <div class="category">
+    <h2 class="category-title">📩 お問い合わせ</h2>
+    <p>ご不明な点やお気づきの点がございましたら、以下のメールアドレスまでお気軽にご連絡ください。</p>
+    <p><a href="mailto:your-email@example.com" style="color: #7c5cfc; font-weight: bold;">your-email@example.com</a></p>
+  </div>
+
+</div>
+
+<div class="footer">
+  VoxNote
+</div>
+
+</body>
+</html>
